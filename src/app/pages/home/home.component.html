@@ -1,0 +1,33 @@
+<div class="container container__home">
+  <div class="container__main">
+    <div class="container--left">
+      <p>Evolucion de Tipos de Cambio y Montos Transacionados en Divisas(USD) en Octubre 2024</p>
+    </div>
+    <div class="container--right">
+      <div class="chart-container">
+        <div class="container--monto">
+          <p class="monto">Monto de cambio <span class="btn_min btn-outlite btn_monto">2000</span></p>
+          <p>Tipo de Cambio: <span>200000</span></p>
+        </div>
+        <canvas id="MyChart">{{ chart }}</canvas>
+      </div>
+      <div class="form">
+        <input class="input-form" type="text" placeholder="Ingrese monto" [(ngModel)]="selectedMount">
+        <div class="form-divisas">
+          <p>Divisas</p>
+          <div class="form-divisas__group">
+            <app-custom-select [titulo]="'Divisa Origen'" [options]="options"
+                               (selectionChange)="onOriginCurrencyChange($event)"/>
+            <app-custom-select [titulo]="'Divisa Destino'" [options]="options"
+                               (selectionChange)="onDestinationCurrencyChange($event)"/>
+            <button class="btn btn-outlite" (click)="applyExchange()">Exchange</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="historial">
+    <p>Historial</p>
+    <app-custom-table [data]="data"/>
+  </div>
+</div>

@@ -1,0 +1,15 @@
+<div class="form-select">
+  <p>{{ titulo }}</p>
+  <div class="custom-select">
+    <button class="select-button" (click)="toggleDropdown()">
+      {{ selectedOption ? selectedOption : 'Selecciona la opción' }}
+      <fa-icon [icon]="faCaretDown"></fa-icon>
+    </button>
+
+    <ul *ngIf="isDropdownOpen" class="options-list">
+      <li *ngFor="let option of options" (click)="selectOption(option)">
+        {{ option }}
+      </li>
+    </ul>
+  </div>
+</div>

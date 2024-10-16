@@ -1,0 +1,22 @@
+<table class="custom-table">
+  <thead>
+  <tr>
+    <th scope="col">Monto</th>
+    <th scope="col">Moneda Origen</th>
+    <th scope="col">Moneda Destino</th>
+    <th scope="col">Monto Tipo Cambio</th>
+    <th scope="col">Monto de Cambio</th>
+    <th scope="col">Fecha</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let option of data">
+    <td>{{ option.monto }}</td>
+    <td>{{ option.moneda_origen }}</td>
+    <td>{{ option.moneda_destino }}</td>
+    <td>{{ option.tipo_de_cambio }}</td>
+    <td>{{ option.monto_con_tipo_de_cambio }}</td>
+    <td>{{ option.fecha | date:'fullDate' }}</td>
+  </tr>
+  </tbody>
+</table>

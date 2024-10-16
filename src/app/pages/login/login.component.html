@@ -1,0 +1,39 @@
+<div class="section-login">
+  <div class="section-login__right">
+    <div class="section-right__form">
+      <div class="form-header">
+        <img src="/assets/logo.png"/>
+        <h1>ExchangeApp</h1>
+      </div>
+      <div class="form-subtitle">
+        <p>Bienvenido a ExchangeApp</p>
+      </div>
+      <div class="form-body">
+        <div class="form-input">
+          <label>Correo</label>
+          <input [(ngModel)]="email" type="text" placeholder="Ingresa tu correo">
+        </div>
+        <div class="form-input">
+          <label>Contraseña</label>
+          <input [(ngModel)]="password" type="password" placeholder="Ingresa tu contraseña">
+        </div>
+        <p>
+          <a routerLink="/forget-password">Olvidaste tu contraseña</a>
+        </p>
+        <p style="color: darkred">{{ message }}</p>
+        <button class="btn btn-primary" (click)="login()">Ingresar</button>
+      </div>
+      <p>No tienes una cuenta <a routerLink="/registrar">Registrate</a></p>
+    </div>
+  </div>
+  <div class="section-login__left">
+    <div class="container--left">
+      <img src="/assets/login.png"/>
+      <div>
+        <h2>Tu aliado en el intercambio de divisas</h2>
+        <p>Gestiona tus divisas de manera rápida y eficiente, con acceso a tasas de cambio actualizadas en tiempo real y
+          soporte para múltiples monedas</p>
+      </div>
+    </div>
+  </div>
+</div>

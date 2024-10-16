@@ -1,0 +1,28 @@
+.custom-table {
+  width: 100%;
+  border-collapse: separate; /* Evitar que se colapsen los bordes para bordes redondeados */
+  border-spacing: 0; /* Quitar los espacios entre las celdas */
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.custom-table th, .custom-table td {
+  padding: 8px;
+  text-align: left;
+  color: var(--color-primary);
+}
+
+.custom-table td {
+  color: var(--color-secondary);
+}
+
+.custom-table th {
+  background-color: #f4f4f4;
+  font-weight: bold;
+}
+
+.custom-table td:hover {
+  background-color: #f1f1f1;
+  color: var(--color-primary);
+}
